@@ -6,6 +6,10 @@ __pycache__/
 # C extensions
 *.so
 
+# Databases
+*.sql
+*.sqlite
+
 # Distribution / packaging
 .Python
 build/
@@ -102,15 +106,3 @@ venv.bak/
 
 # mypy
 .mypy_cache/
-© 2017 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-API
-Training
-Shop
-Blog
-About
