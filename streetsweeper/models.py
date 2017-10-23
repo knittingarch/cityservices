@@ -1,13 +1,15 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+import datetime
 from multiselectfield import MultiSelectField
+
 from django.db import models
 
 
-class Neighborhood(models.model):
+class Neighborhood(models.Model):
     name = models.CharField(max_length=255)
 
-class Street(models.model):
+class Street(models.Model):
 
     WEEKDAY_CHOICES = (
         ('M', 'Monday'),
