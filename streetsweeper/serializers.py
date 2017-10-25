@@ -7,6 +7,6 @@ class StreetSerializer(serializers.ModelSerializer):
         model = Street
         fields = (
             'id', 'neighborhood', 'name', 'street_type', 'even_week_day',
-            'even_week_number', 'even_start_time', 'even_duration',
+            'even_week_number', 'even_start_time', 'even_end_time',
             'odd_week_day', 'odd_week_number', 'odd_start_time',
-            'odd_duration', 'winter_hiatus')
+            'odd_end_time', 'winter_hiatus')
