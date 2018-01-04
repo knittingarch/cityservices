@@ -14,7 +14,7 @@ from streetsweeper.serializers import (
 class StreetList(generics.ListCreateAPIView):
     queryset = Street.objects.all()
     serializer_class = StreetSerializer
-    permissions_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
@@ -22,7 +22,7 @@ class StreetList(generics.ListCreateAPIView):
 class StreetDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Street.objects.all()
     serializer_class = StreetSerializer
-    permissions_classes = (
+    permission_classes = (
         permissions.IsAuthenticatedOrReadOnly,
         IsOwnerOrReadOnly)
 
