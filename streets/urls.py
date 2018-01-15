@@ -15,6 +15,7 @@ router.register(r'usres', views.UserViewSet)
 
 # The API URLs are now determined automatically by the router.
 urlpatterns = [
+    url(r'^api-auth/', include('rest_framework.urls')),
     url(r'^', include(router.urls))
 ]
 
