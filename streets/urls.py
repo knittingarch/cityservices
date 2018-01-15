@@ -2,6 +2,7 @@ from django.conf.urls import (
     include,
     url,
 )
+
 from rest_framework.routers import DefaultRouter
 from rest_framework.schemas import get_schema_view
 

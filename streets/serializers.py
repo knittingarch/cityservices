@@ -21,13 +21,13 @@ class UserSerializer(serializers.ModelSerializer):
 
 class StreetSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
-    even_week_number = serializers.MultipleChoiceField(choices=WEEK_NUMBERS)
-    odd_week_number = serializers.MultipleChoiceField(choices=WEEK_NUMBERS)
+    even_side_week_number = serializers.MultipleChoiceField(choices=WEEK_NUMBERS)
+    odd_side_week_number = serializers.MultipleChoiceField(choices=WEEK_NUMBERS)
 
     class Meta:
         model = Street
         fields = (
-            'id', 'owner', 'neighborhood', 'name', 'street_type', 'even_week_day',
-            'even_week_number', 'even_start_time', 'even_end_time',
-            'odd_week_day', 'odd_week_number', 'odd_start_time',
-            'odd_end_time', 'winter_hiatus')
+            'id', 'owner', 'neighborhood', 'street_name', 'street_type', 'even_side_week_day',
+            'even_side_week_number', 'even_side_start_time', 'even_side_end_time',
+            'odd_side_week_day', 'odd_side_week_number', 'odd_side_start_time',
+            'odd_side_end_time', 'winter_hiatus')
