@@ -3,18 +3,21 @@ from django.conf.urls import (
     url,
 )
 from rest_framework.routers import DefaultRouter
-from rest_framework.urlpatterns import format_suffix_patterns
+from rest_framework.schemas import get_schema_view
 
 from streets import views
 
 
+schema_view = get_schema_view(title='Pastebin API')
+
 # Create a router and register our viewsets with it.
 router = DefaultRouter()
 router.register(r'streets', views.StreetViewSet)
-router.register(r'usres', views.UserViewSet)
+router.register(r'users', views.UserViewSet)
 
 # The API URLs are now determined automatically by the router.
 urlpatterns = [
+    url(r'^schema/$', schema_view),
     url(r'^api-auth/', include('rest_framework.urls')),
     url(r'^', include(router.urls))
 ]
