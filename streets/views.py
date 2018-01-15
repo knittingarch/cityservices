@@ -44,29 +44,3 @@ class StreetViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
-
-
-# class UserList(generics.ListAPIView):
-#     queryset = User.objects.all()
-#     serializer_class = UserSerializer
-
-
-# class UserDetail(generics.RetrieveAPIView):
-#     queryset = User.objects.all()
-#     serializer_class = UserSerializer
-
-
-# class StreetList(generics.ListCreateAPIView):
-#     queryset = Street.objects.all()
-#     serializer_class = StreetSerializer
-#     permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
-
-#     def perform_create(self, serializer):
-#         serializer.save(owner=self.request.user)
-
-# class StreetDetail(generics.RetrieveUpdateDestroyAPIView):
-#     queryset = Street.objects.all()
-#     serializer_class = StreetSerializer
-#     permission_classes = (
-#         permissions.IsAuthenticatedOrReadOnly,
-#         IsOwnerOrReadOnly)

@@ -18,24 +18,3 @@ urlpatterns = [
     url(r'^api-auth/', include('rest_framework.urls')),
     url(r'^', include(router.urls))
 ]
-
-
-# urlpatterns = format_suffix_patterns([
-#     url(r'^$', views.api_root),
-#     url(r'^streets/$', 
-#         views.StreetList.as_view(),
-#         name='street-list'),
-#     url(r'^streets/(?P<pk>[0-9]+)/$',
-#         views.StreetDetail.as_view(),
-#         name='street-detail'),
-#     url(r'^users/$',
-#         views.UserList.as_view(),
-#         name='user-list'),
-#     url(r'^users/(?P<pk>[0-9]+)/$',
-#         views.UserDetail.as_view(),
-#         name='user-detail'),
-# ])
-
-# urlpatterns += [
-#     url(r'^api-auth/', include('rest_framework.urls')),
-# ]
