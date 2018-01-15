@@ -3,7 +3,7 @@ from rest_framework import (
     fields,
     serializers,
 )
-from streetsweeper.models import (
+from streets.models import (
     Street,
     NEIGHBORHOODS,
     WEEKDAY_CHOICES,

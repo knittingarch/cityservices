@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'multiselectfield',
-    'streetsweeper.apps.StreetsweeperConfig',
+    'streets.apps.StreetsConfig',
 ]
 
 MIDDLEWARE = [
