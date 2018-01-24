@@ -83,8 +83,9 @@ class Migration(migrations.Migration):
                     ('Sa', 'Saturday'),
                     ('Su', 'Sunday')],
                     max_length=2)),
-                ('odd_side_week_number', multiselectfield.db.fields.MultiSelectField(choices=[
-                    ('1', '1st'),
+                ('odd_side_week_number',
+                    multiselectfield.db.fields.MultiSelectField(choices=[
+                        ('1', '1st'),
                         ('2', '2nd'),
                         ('3', '3rd'),
                         ('4', '4th')],
