@@ -22,6 +22,21 @@ NEIGHBORHOODS = (
     ('Tufts', 'Tufts'),
 )
 
+SUFFICES = (
+    ('St', 'Street'),
+    ('Ave', 'Avenue'),
+    ('Ter', 'Terrace'),
+    ('Hwy', 'Highway'),
+    ('Rd', 'Road'),
+    ('Ct', 'Court'),
+    ('Cir', 'Circle'),
+    ('Blvd', 'Boulevard'),
+    ('Pk', 'Park'),
+    ('Way', 'Way'),
+    ('Pky', 'Parkway'),
+    ('Dr', 'Drive'),
+    )
+
 WEEKDAY_CHOICES = (
     ('M', 'Monday'),
     ('T', 'Tuesday'),
@@ -45,7 +60,11 @@ class Street(models.Model):
         max_length=255,
         choices=NEIGHBORHOODS)
     street_name = models.CharField(max_length=255)
-    street_type = models.CharField(max_length=15, null=True, blank=True)
+    suffix = models.CharField(
+        max_length=15,
+        null=True,
+        blank=True,
+        choices=SUFFICES)
     even_side_week_day = models.CharField(
         max_length=2,
         choices=WEEKDAY_CHOICES)
