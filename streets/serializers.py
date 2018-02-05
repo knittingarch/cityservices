@@ -26,7 +26,8 @@ class StreetSerializer(serializers.ModelSerializer):
     class Meta:
         model = Street
         fields = (
-            'id', 'owner', 'neighborhood', 'street_name', 'suffix', 'even_side_week_day',
-            'even_side_week_number', 'even_side_start_time', 'even_side_end_time',
-            'odd_side_week_day', 'odd_side_week_number', 'odd_side_start_time',
+            'id', 'owner', 'neighborhood', 'street_name', 'suffix',
+            'even_side_week_day', 'even_side_week_number',
+            'even_side_start_time', 'even_side_end_time', 'odd_side_week_day',
+            'odd_side_week_number', 'odd_side_start_time',
             'odd_side_end_time', 'winter_hiatus')
