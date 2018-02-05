@@ -62,7 +62,6 @@ class Street(models.Model):
     street_name = models.CharField(max_length=255)
     suffix = models.CharField(
         max_length=15,
-        null=True,
         blank=True,
         choices=SUFFICES)
     even_side_week_day = models.CharField(
