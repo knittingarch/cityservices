@@ -50,4 +50,4 @@ class StreetDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Street.objects.all()
     serializer_class = StreetSerializer
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,
-        IsOwnerOrReadOnly,)
+                          IsOwnerOrReadOnly,)
